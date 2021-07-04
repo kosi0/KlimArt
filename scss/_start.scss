@@ -1,0 +1,37 @@
+.start {
+  height: 100%;
+  //margin-top: 10%;
+  padding-top:25vh;//viewport height
+  overflow: hidden;//suwak do przewijania
+   align-items: center;
+  text-align: center;
+  background:
+  linear-gradient(to right, rgba($primary-color, 0.9), rgba($primary-color, 0.3)),
+  url('../img/klima-2d.jpg') center top;
+  background-size: cover;
+  @include transition-ease;
+  //transform: translateX(-30px);
+
+  &__motto {
+    font-size: 3.85rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    border-bottom: 2px solid set-text-color($primary-color);
+    
+    &--key {
+      color: $secondary-color;
+      font-weight: 700;
+    }
+  }
+  
+}
+@keyframes text-in-left-md{
+	0% {transform: translate(-30px, 0px);}
+	100% {transform: translate(00px, 0px);}
+}
+@keyframes text-in-left-xl{
+	0% {transform: translate(-100px, 0px);}
+	100% {transform: translate(00px, 0px);}
+}

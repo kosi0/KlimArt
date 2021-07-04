@@ -1,0 +1,124 @@
+@include media-md {
+  .start{
+    h2 {
+      font-size: 2rem;
+    }
+    padding-top:30vh;
+    &__motto{
+      font-size: 5rem;
+      animation: text-in-left-md 1s ease-in-out 0s 1 normal;
+    }
+  }
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      //background:black;
+      text-align: right;
+
+      &__item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+      &__link {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+ 
+
+  .services {
+    
+    .services__bio-image{
+      .services__bio{
+        .text-secondary {
+            font-size: 3.5rem;
+             color: $secondary-color
+          }
+      }
+    }
+
+
+    p {
+      font-size: 1.3rem;
+    }
+    
+    #services__desc{
+      font-size: 1.5rem;
+    }
+    // #text-secondary-id {
+    //   font-size: 3.5rem;
+    //   color: $secondary-color
+    // }
+    .jobs__job{
+      h2 {
+        font-size: 2rem;
+        color: whitesmoke;
+        margin-bottom: 1rem;
+      }
+      &:hover {
+        h2 {
+          @include transition-ease;
+            color: $secondary-color;
+            //font-size: 2.3rem;
+
+        }
+     }
+   }
+  }
+  
+
+  .experience {
+    
+    &__bio-image {
+      height: 45vh;
+    }
+    &__items {
+      grid-template-columns: repeat(2,1fr);
+    }
+    .text-secondary {
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .contact__list {
+    grid-template-columns: repeat(2,1fr);;
+  }
+  
+}
+
+@include media-xl {
+  .nav {
+    .menu-nav__item {
+      //display: inline;
+      padding-right: 5rem;
+    }
+  }
+  .experience {
+    &__items {
+     grid-template-columns: repeat(3,1fr);
+    }
+  }
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .start{
+    
+    &__motto{
+      
+      animation: text-in-left-xl 1s ease-in-out 0s 1 normal;
+    }
+  }
+
+}
